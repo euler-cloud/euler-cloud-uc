@@ -15,7 +15,9 @@ spring:
       ddl-auto: none
 
 euler:
-  runtime-path: /var/lib/euler-cloud/uc
+  application:
+    runtime-path: run
+    #tmp-path: tmp
 
 eureka:
   client:
