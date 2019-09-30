@@ -14,29 +14,21 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.6.RELEASE</version>
+        <version>2.1.6.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <euler-cloud.version>1.0.0.M1-SNAPSHOT</euler-cloud.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Finchley.SR2</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
                 <groupId>org.eulerframework.cloud</groupId>
                 <artifactId>euler-cloud-dependencies</artifactId>
-                <version>1.0.0.M1-SNAPSHOT</version>
+                <version>${euler-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -48,11 +40,10 @@
             <groupId>org.eulerframework.cloud</groupId>
             <artifactId>euler-cloud-starter</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>org.eulerframework</groupId>
-            <artifactId>euler-web-core</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.eulerframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-euler-web-security</artifactId>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.eulerframework</groupId>
@@ -92,6 +83,10 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
         <dependency>

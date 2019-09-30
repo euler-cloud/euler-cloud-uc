@@ -13,9 +13,13 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: none
+  redis:
+    host: localhost
+    port: 6379
 
 euler:
-  runtime-path: /var/lib/euler-cloud/uc
+  application:
+    runtime-path: /var/run/eulerprojects/${spring.application.name}
 
 eureka:
   client:
